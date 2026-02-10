@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 59.25 164.29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #042029;
+      }
+
+      .cls-2 {
+        fill: url(#GradientFill_3);
+      }
+    </style>
+    <linearGradient id="GradientFill_3" data-name="GradientFill 3" x1="44.83" y1="138.48" x2="14.42" y2="108.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c0b025"/>
+      <stop offset=".25" stop-color="#ece493"/>
+      <stop offset=".5" stop-color="#c1b213"/>
+      <stop offset=".82" stop-color="#ece391"/>
+      <stop offset="1" stop-color="#beb114"/>
+    </linearGradient>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada_1">
+    <g>
+      <path class="cls-1" d="M59.25,164.29H0V0h59.25v164.29ZM1.94,162.35h55.38V1.94H1.94v160.41Z"/>
+      <path class="cls-2" d="M19.99,106.49c0-2.66.94-4.93,2.83-6.81,1.88-1.89,4.15-2.83,6.81-2.83s4.93.94,6.81,2.83c1.88,1.88,2.83,4.15,2.83,6.81s-.94,4.96-2.83,6.9c-1.89,1.94-4.15,2.91-6.81,2.91s-4.93-.97-6.81-2.91c-1.89-1.94-2.83-4.24-2.83-6.9ZM19.99,140.06c0-2.66.94-4.96,2.83-6.9,1.88-1.94,4.15-2.91,6.81-2.91s4.93.97,6.81,2.91c1.88,1.94,2.83,4.24,2.83,6.9s-.94,4.93-2.83,6.81c-1.89,1.88-4.15,2.82-6.81,2.82s-4.93-.94-6.81-2.82c-1.89-1.89-2.83-4.15-2.83-6.81Z"/>
+    </g>
+  </g>
+</svg>

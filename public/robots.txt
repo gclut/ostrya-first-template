@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://luttjohannsoares.com.br
+
+# Sitemaps
+Sitemap: https://luttjohannsoares.com.br/sitemap.xml
