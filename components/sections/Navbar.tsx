@@ -2,7 +2,6 @@
 
 import { ArrowRight, Menu, X } from "lucide-react";
 
-import { CTAButton } from "../custom/CTAButton";
 import Link from "next/link";
 import Logo from "@/public/logo.png";
 import { useState } from "react";

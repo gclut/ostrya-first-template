@@ -1,4 +1,4 @@
-import { BadgeCheck, FileText, HandCoins, Users } from "lucide-react";
+import { BadgeCheck, FileText, Users } from "lucide-react";
 
 const experiences = [
   {
@@ -17,16 +17,16 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="pb-24 bg-black text-white">
-      <div className="max-w-screen-xl px-4 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <section id="experience" className="bg-black pb-24 text-white">
+      <div className="mx-auto px-4 max-w-screen-xl">
+        <div className="gap-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {experiences.map((experience, index) => (
             <article
               key={index}
-              className="flex flex-col items-center text-center gap-4"
+              className="flex flex-col items-center gap-4 text-center"
             >
               <experience.icon className="w-10 h-10" aria-hidden="true" />
-              <p className="font-light text-2xl mt-4">{experience.title}</p>
+              <p className="mt-4 font-light text-2xl">{experience.title}</p>
             </article>
           ))}
         </div>

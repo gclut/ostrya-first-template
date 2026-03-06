@@ -22,7 +22,10 @@ export function Testimonials() {
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((item, index) => (
-              <CarouselItem key={index} className="basis-[85%] md:basis-[60%] lg:basis-[30%]">
+              <CarouselItem
+                key={index}
+                className="basis-[85%] md:basis-[60%] lg:basis-[30%]"
+              >
                 <Card className="shadow-sm rounded-2xl h-full overflow-hidden">
                   <CardContent className="p-0 h-full">
                     <div className="flex flex-col justify-between p-8 h-[520px] lg:h-[570px] md:">
@@ -32,7 +35,7 @@ export function Testimonials() {
                           <AvatarFallback>{item.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <p className="text-muted-foreground leading-relaxed">
-                          "{item.quote}"
+                          &quot {item.quote} &quot
                         </p>
                       </div>
 

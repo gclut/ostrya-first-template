@@ -54,37 +54,28 @@ function HeroActions() {
     </div>
   );
 }
-
-function ExperienceCard({ experience }: any) {
-  const Icon = experience.icon;
-
-  return (
-    <Card className="bg-white/5 backdrop-blur border-white/10">
-      <CardContent className="flex flex-col items-center gap-4 p-8 text-center">
-        <Icon className="w-8 h-8 text-accent" aria-hidden="true" />
-        <p className="font-medium text-white text-lg">{experience.title}</p>
-      </CardContent>
-    </Card>
-  );
-}
-
-function ExperienceGrid() {
-  return (
-    <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full">
-      {experiences.map((experience, index) => (
-        <ExperienceCard key={index} experience={experience} />
-      ))}
-    </div>
-  );
-}
-
 export function Hero() {
   return (
     <main className="flex items-center bg-black pt-20 min-h-screen text-white">
       <MaxWidthWrapper>
         <section className="flex flex-col justify-center items-center gap-16 py-24 text-center">
           <HeroHeader />
-          <ExperienceGrid />
+
+          <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full">
+            {experiences.map((experience, index) => {
+              const Icon = experience.icon;
+              return (
+                <Card key={index} className="bg-white/5 backdrop-blur border-white/10">
+                  <CardContent className="flex flex-col items-center gap-4 p-8 text-center">
+                    <Icon className="w-8 h-8 text-accent" aria-hidden="true" />
+                    <p className="font-medium text-white text-lg">
+                      {experience.title}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </section>
       </MaxWidthWrapper>
     </main>
