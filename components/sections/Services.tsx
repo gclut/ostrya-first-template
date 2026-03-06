@@ -5,9 +5,9 @@ import {
   ArrowUpRight,
   BarChart3,
   FileCheck,
+  Handshake,
   LineChart,
   PiggyBank,
-  Scale,
   Target,
   TrendingDown,
   Wallet,
@@ -60,7 +60,7 @@ const weDeliverContent: CardItem[] = [
   { title: "Modelo de desempenho financeiro gerencial", icon: BarChart3 },
   { title: "Orçamento financeiro", icon: Target },
   { title: "Avaliação de projetos de investimento", icon: Wallet },
-  { title: "Renegociação de dívidas", icon: Scale },
+  { title: "Renegociação de dívidas", icon: Handshake },
   { title: "Valuation – avaliação da empresa", icon: ArrowUpRight },
 ];
 

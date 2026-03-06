@@ -1,10 +1,10 @@
 "use client";
 
 import { ArrowRight, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Logo from "@/public/logo.png";
-import { useState } from "react";
 import { whatsappLink } from "@/constants/data";
 
 const navbarItems = [
@@ -16,6 +16,29 @@ const navbarItems = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (!hash) return;
+
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    };
+
+    handleHashScroll();
+    window.addEventListener("hashchange", handleHashScroll);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashScroll);
+    };
+  }, []);
 
   return (
     <header className="top-0 left-0 z-50 fixed bg-black shadow-md w-full text-white">
@@ -46,7 +69,7 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <Link
-            href="https://wa.me/5551989905849?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20advogado"
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:inline-flex items-center gap-2 hover:bg-white px-5 py-2 border border-white rounded-full font-semibold text-white hover:text-black text-sm transition"

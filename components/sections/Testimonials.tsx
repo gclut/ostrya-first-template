@@ -35,7 +35,7 @@ export function Testimonials() {
                           <AvatarFallback>{item.name.charAt(0)}</AvatarFallback>
                         </Avatar>
                         <p className="text-muted-foreground leading-relaxed">
-                          &quot {item.quote} &quot
+                          &ldquo;{item.quote}&rdquo;
                         </p>
                       </div>
 
