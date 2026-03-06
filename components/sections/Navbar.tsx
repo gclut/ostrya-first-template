@@ -1,30 +1,33 @@
 "use client";
 
-import { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
+
+import { CTAButton } from "../custom/CTAButton";
 import Link from "next/link";
 import Logo from "@/public/logo.png";
+import { useState } from "react";
+import { whatsappLink } from "@/constants/data";
 
 const navbarItems = [
   { label: "Home", href: "/" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Equipe", href: "#equipe" },
-  { label: "Atualidades", href: "#posts" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Equipe", href: "/#equipe" },
+  { label: "Insights Empresariais", href: "/#posts" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black text-white shadow-md">
-      <div className="max-w-screen-xl mx-auto px-4 lg:px-10">
-        <nav className="flex items-center justify-between py-4">
+    <header className="top-0 left-0 z-50 fixed bg-black shadow-md w-full text-white">
+      <div className="mx-auto px-4 lg:px-10 max-w-screen-xl">
+        <nav className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/">
             <img
               src={Logo.src}
               alt="Logo da L&S Advocacia"
-              className="w-26 h-12 invert brightness-0"
+              className="brightness-0 invert w-26 h-12"
             />
           </Link>
 
@@ -34,7 +37,7 @@ export const Navbar = () => {
               <li key={index}>
                 <Link
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition font-medium"
+                  className="font-medium text-gray-300 hover:text-white transition"
                 >
                   {item.label}
                 </Link>
@@ -47,7 +50,7 @@ export const Navbar = () => {
             href="https://wa.me/5551989905849?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20advogado"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center gap-2 rounded-full border border-white px-5 py-2 text-sm font-semibold text-white hover:bg-white hover:text-black transition"
+            className="hidden lg:inline-flex items-center gap-2 hover:bg-white px-5 py-2 border border-white rounded-full font-semibold text-white hover:text-black text-sm transition"
           >
             Fale Conosco <ArrowRight size={16} />
           </Link>
@@ -56,7 +59,7 @@ export const Navbar = () => {
           <button
             aria-label="Abrir menu"
             onClick={() => setIsOpen(true)}
-            className="inline-flex lg:hidden p-2 hover:bg-white/10 rounded-md transition"
+            className="lg:hidden inline-flex hover:bg-white/10 p-2 rounded-md transition"
           >
             <Menu size={24} />
           </button>
@@ -67,7 +70,7 @@ export const Navbar = () => {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+          className="z-40 fixed inset-0 bg-black/50 backdrop-blur-sm"
         />
       )}
 
@@ -77,12 +80,12 @@ export const Navbar = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200">
+        <div className="flex justify-between items-center px-4 py-4 border-gray-200 border-b">
           <span className="font-semibold text-lg">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Fechar menu"
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="hover:bg-gray-100 p-2 rounded-md"
           >
             <X size={20} />
           </button>
@@ -94,7 +97,7 @@ export const Navbar = () => {
               <Link
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-base font-medium text-gray-700 hover:text-black transition"
+                className="block font-medium text-gray-700 hover:text-black text-base transition"
               >
                 {item.label}
               </Link>
@@ -102,9 +105,10 @@ export const Navbar = () => {
           ))}
           <li>
             <Link
-              href="https://wa.me/5551989905849?text=Olá,%20vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20advogado"
-              onClick={() => setIsOpen(false)}
-              className="mt-4 inline-flex items-center gap-2 border border-black rounded-full px-4 py-2 text-sm font-semibold hover:bg-black hover:text-white transition"
+              href={whatsappLink}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="inline-flex items-center gap-2 hover:bg-black mt-4 px-4 py-2 border border-black rounded-full font-semibold hover:text-white text-sm transition"
             >
               Fale Conosco <ArrowRight size={16} />
             </Link>

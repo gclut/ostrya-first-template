@@ -1,22 +1,18 @@
-import { Experience } from "@/components/Experience";
-// import { FAQ } from '@/components/FAQ';
-import { Hero } from "@/components/Hero";
-import HowWeWork from "@/components/HowWeWork";
-import { Posts } from "@/components/Posts";
-import { Services } from "@/components/Services";
-import { Team } from "@/components/Team";
-import { Testimonials } from "@/components/Testimonials";
+import { Hero } from "@/components/sections/Hero";
+import { HowWeWork } from "@/components/sections/HowWeWork";
+import { Posts } from "@/components/sections/Posts";
+import { Services } from "@/components/sections/Services";
+import { Team } from "@/components/sections/Team";
+import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Experience />
       <Services />
       <HowWeWork />
       <Team />
       <Testimonials />
-      {/* <FAQ /> */}
       <Posts />
     </>
   );
