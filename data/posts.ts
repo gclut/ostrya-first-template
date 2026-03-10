@@ -1,5 +1,5 @@
 import postImage01 from "../public/posts/post-1.png";
-import postImage02 from "../public/posts/post-2.jpg";
+import postImage02 from "../public/posts/post-2.jpeg";
 import postImage03 from "../public/posts/post-3.png";
 import postImage04 from "../public/posts/post-4.png";
 import postImage05 from "../public/posts/post-5.png";

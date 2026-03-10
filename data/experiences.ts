@@ -8,7 +8,7 @@ type Experience = {
 export const experiences: Experience[] = [
   {
     icon: BadgeCheck,
-    title: "Experiência de mais de uma década em finanças empresariais",
+    title: "+ 15 anos de experiência em finanças empresariais",
   },
   {
     icon: Users,

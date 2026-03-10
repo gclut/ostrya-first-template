@@ -52,6 +52,7 @@ export function HowWeWork() {
           <h2 className="font-semibold text-white text-4xl md:text-5xl tracking-tight">
             Como Trabalhamos
           </h2>
+
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             Um processo estruturado para transformar a saúde financeira da sua
             empresa.
@@ -65,9 +66,9 @@ export function HowWeWork() {
             return (
               <Card
                 key={step.number}
-                className="relative bg-zinc-900 border-zinc-800 hover:border-amber-500/40 text-white transition-colors"
+                className="relative flex flex-col bg-zinc-900 border-zinc-800 hover:border-amber-500/40 text-white transition-colors"
               >
-                <CardHeader className="space-y-4">
+                <CardHeader className="space-y-4 min-h-[140px]">
                   <div className="flex justify-between items-center">
                     <Badge
                       variant="secondary"
@@ -81,14 +82,14 @@ export function HowWeWork() {
                     </div>
                   </div>
 
-                  <CardTitle className="text-lg leading-snug">
+                  <CardTitle className="text-lg line-clamp-2 leading-snug">
                     {step.title}
                   </CardTitle>
                 </CardHeader>
 
                 <Separator className="bg-zinc-800" />
 
-                <CardContent className="pt-6">
+                <CardContent className="flex-1 pt-6">
                   <CardDescription className="text-zinc-400 leading-relaxed">
                     {step.description}
                   </CardDescription>

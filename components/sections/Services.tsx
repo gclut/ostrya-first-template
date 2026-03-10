@@ -2,12 +2,12 @@
 
 import {
   AlertCircle,
+  AlertTriangle,
   ArrowUpRight,
   BarChart3,
   FileCheck,
   Handshake,
   LineChart,
-  PiggyBank,
   Target,
   TrendingDown,
   Wallet,
@@ -38,7 +38,7 @@ const forWhoContent: CardItem[] = [
   },
   {
     title: "Estão preocupadas com um endividamento crescente",
-    icon: PiggyBank,
+    icon: AlertTriangle,
   },
   {
     title: "Entendem que devem tomar melhores decisões financeiras",
@@ -154,7 +154,7 @@ export function Services() {
   return (
     <section id="servicos" className="scroll-my-24">
       <CardsSection
-        title="Esta consultoria é para empresas que:"
+        title="Esta consultoria é para empresas e produtores rurais que:"
         items={forWhoContent}
         variant="dark"
         background="bg-[#565656]"
